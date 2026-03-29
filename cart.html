@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الحقيبة | Aura Checkout</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .cart-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 60px; padding-top: 150px; }
+        .cart-item { display: flex; align-items: center; gap: 30px; padding: 30px 0; border-bottom: 1px solid var(--border); }
+        .cart-summary { background: #fff; padding: 50px; border: 1px solid var(--border); }
+    </style>
+</head>
+<body>
+
+    <div id="preloader"><div class="loader-text">AURA</div></div>
+
+    <header class="scrolled">
+        <div class="container">
+            <nav>
+                <div class="logo">AURA</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="shop.html">المجموعات</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container cart-grid reveal">
+        <div>
+            <h2 style="font-size: 2.5rem; margin-bottom: 40px;">حقيبة التسوق</h2>
+            <div id="cartList">
+                <p id="emptyCart" style="color: var(--text-muted); text-align: center; padding: 100px;">حقيبتكِ فارغة حالياً..</p>
+            </div>
+        </div>
+        
+        <div class="cart-summary">
+            <h3 style="margin-bottom: 30px;">الملخص</h3>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 15px;">
+                <span>المجموع</span>
+                <span id="subtotal">0 ر.س</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 40px; font-weight: 700; border-top: 1px solid #eee; padding-top: 20px;">
+                <span>الإجمالي</span>
+                <span id="total">0 ر.س</span>
+            </div>
+            <button class="btn-editorial" style="width: 100%;">إتمام الطلب</button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const list = document.getElementById('cartList');
+            const subtotalEl = document.getElementById('subtotal');
+            const totalEl = document.getElementById('total');
+            const emptyEl = document.getElementById('emptyCart');
+            
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            
+            if (cart.length > 0) {
+                emptyEl.remove();
+                let sum = 0;
+                cart.forEach((item, idx) => {
+                    sum += item.price * item.quantity;
+                    const div = document.createElement('div');
+                    div.className = 'cart-item';
+                    div.innerHTML = `
+                        <img src="${item.image}" style="width:100px; height:130px; object-fit:cover;">
+                        <div style="flex-grow:1;">
+                            <h4 style="font-size:1.1rem; margin-bottom:10px;">${item.title}</h4>
+                            <p style="color:var(--text-muted);">الكمية: ${item.quantity}</p>
+                        </div>
+                        <div style="font-weight:700;">${item.price} ر.س</div>
+                        <i class="fa-solid fa-xmark" style="cursor:pointer;" onclick="removeItem(${idx})"></i>
+                    `;
+                    list.appendChild(div);
+                });
+                subtotalEl.textContent = sum + ' ر.س';
+                totalEl.textContent = sum + ' ر.س';
+            }
+
+            window.removeItem = (idx) => {
+                cart.splice(idx, 1);
+                localStorage.setItem('cart', JSON.stringify(cart));
+                location.reload();
+            };
+        });
+    </script>
+</body>
+</html>

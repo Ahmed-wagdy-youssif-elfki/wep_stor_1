@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المجموعات | Aura Journal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div id="preloader"><div class="loader-text">AURA</div></div>
+
+    <header class="scrolled">
+        <div class="container">
+            <nav>
+                <div class="logo">AURA</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="shop.html" class="active">المجموعات</a></li>
+                    <li><a href="sales.html">التصفيات</a></li>
+                    <li><a href="about.html">الملف</a></li>
+                    <li><a href="contact.html">اتصل</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i><span class="cart-count">0</span></a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main style="padding-top: 150px;">
+        <section class="container">
+            <h2 class="reveal" style="font-size: 3rem; margin-bottom: 50px;">تشكيلة الموسم</h2>
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <article class="product-item reveal">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=800&q=80" alt="Silk Dress">
+                        <button class="add-btn" onclick="addToCart(1, 'فستان الحرير الكلاسيك', 850, 'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=800&q=80')">أضيفي للحقيبة</button>
+                    </div>
+                    <h3 style="font-size: 1.2rem; margin-bottom: 10px;">فستان الحرير الكلاسيك</h3>
+                    <p style="color: var(--accent); font-weight: 700;">850 ر.س</p>
+                </article>
+                <!-- Add more items as needed -->
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

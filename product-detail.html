@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل الإصدار | Aura Detail</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .detail-container { display: grid; grid-template-columns: 1.2fr 1fr; gap: 80px; align-items: start; padding-top: 150px; }
+    </style>
+</head>
+<body>
+
+    <div id="preloader"><div class="loader-text">AURA</div></div>
+
+    <header class="scrolled">
+        <div class="container">
+            <nav>
+                <div class="logo">AURA</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="shop.html">المجموعات</a></li>
+                    <li><a href="sales.html">التصفيات</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container detail-container reveal">
+        <div class="product-image" style="margin-bottom: 0;">
+            <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=1000&q=80" alt="Product" style="border: 20px solid #fff; box-shadow: 0 40px 100px rgba(0,0,0,0.05);">
+        </div>
+        <div style="padding-top: 50px;">
+            <h1 style="font-size: 4rem; margin-bottom: 25px;">فستان الحرير الكلاسيك</h1>
+            <p style="color: var(--accent); font-size: 2rem; font-weight: 700; margin-bottom: 40px;">850 ر.س</p>
+            <p style="color: var(--text-muted); font-size: 1.1rem; border-top: 1px solid var(--border); padding-top: 30px;">تجسيد للأناقة الخالدة. هذا الفستان مصنوع من أجود أنواع الحرير الطبيعي ليمنحكِ ملمساً ناعماً ومظهراً ملكياً في أرقى المناسبات.</p>
+            
+            <div style="margin: 40px 0;">
+                <h4 style="margin-bottom: 15px;">المقاسات المتاحة</h4>
+                <div style="display: flex; gap: 15px;">
+                    <span style="border: 1px solid #000; padding: 10px 25px; cursor: pointer;">S</span>
+                    <span style="border: 1px solid #000; background: #000; color: #fff; padding: 10px 25px; cursor: pointer;">M</span>
+                    <span style="border: 1px solid #000; padding: 10px 25px; cursor: pointer;">L</span>
+                </div>
+            </div>
+
+            <button class="btn-editorial" style="width: 100%;" onclick="addToCart(1, 'فستان الحرير الكلاسيك', 850, 'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=1000&q=80')">إضافة للحقيبة الشخصية</button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
