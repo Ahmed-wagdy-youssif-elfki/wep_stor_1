@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أورا | الإصدار الذهبي</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-text">ahmed_el-fki</div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">ahmed_el-fki</div>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">الرئيسية</a></li>
+                    <li><a href="shop.html">المجموعات</a></li>
+                    <li><a href="sales.html">التصفيات</a></li>
+                    <li><a href="about.html">الملف</a></li>
+                    <li><a href="contact.html">اتصل</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <a href="cart.html" style="position: relative;">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Editorial Hero -->
+        <section class="hero">
+            <div class="hero-text">
+                <h1 class="reveal">تعريف جديد للأناقة</h1>
+                <p class="reveal">نحن لا نصنع الموضة، نحن نصنع اللحظات التي لا تُنسى. اكتشفي مجموعتنا الحصرية المصممة لتلهمكِ في كل يوم.</p>
+                <a href="shop.html" class="btn-editorial reveal">تسوقي الإصدار</a>
+            </div>
+            <div class="hero-img">
+                <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1600&q=80" alt="Fashion Editorial">
+            </div>
+        </section>
+
+        <!-- Dynamic Features -->
+        <section class="features-grid">
+            <div class="feature-item reveal">
+                <h4 style="margin-bottom: 15px; color: var(--accent);">01</h4>
+                <h3>صناعة يدوية</h3>
+                <p style="color: var(--text-muted); font-size: 0.8rem;">كل قطعة تعامل كلوحة فنية فريدة.</p>
+            </div>
+            <div class="feature-item reveal">
+                <h4 style="margin-bottom: 15px; color: var(--accent);">02</h4>
+                <h3>مواد مستدامة</h3>
+                <p style="color: var(--text-muted); font-size: 0.8rem;">نحن نحترم الأرض بقدر ما نحترم الجمال.</p>
+            </div>
+            <div class="feature-item reveal" style="border-right: none;">
+                <h4 style="margin-bottom: 15px; color: var(--accent);">03</h4>
+                <h3>شحن سريع</h3>
+                <p style="color: var(--text-muted); font-size: 0.8rem;">صلابة في النقل ورقة في التغليف.</p>
+            </div>
+        </section>
+
+        <!-- Product Grid (Editorial) -->
+        <section class="container" style="padding-top: 100px; padding-bottom: 100px;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 40px;" class="reveal">
+                <h2 style="font-size: 3.5rem;">الأكثر رواجاً</h2>
+                <a href="shop.html" style="text-decoration: underline; font-weight: 700;">مشاهدة الكل</a>
+            </div>
+            
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <article class="product-item reveal">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=800&q=80" alt="Silk Dress">
+                        <button class="add-btn" onclick="addToCart(1, 'فستان الحرير الكلاسيك', 850, 'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=800&q=80')">أضيفي للحقيبة</button>
+                    </div>
+                    <h3 style="font-size: 1.2rem; margin-bottom: 10px;">فستان الحرير الكلاسيك</h3>
+                    <p style="color: var(--accent); font-weight: 700;">850 ر.س</p>
+                </article>
+
+                <!-- Product 2 -->
+                <article class="product-item reveal">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&q=80" alt="Summer Set">
+                        <button class="add-btn" onclick="addToCart(2, 'طقم الصيف المورد', 420, 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&q=80')">أضيفي للحقيبة</button>
+                    </div>
+                    <h3 style="font-size: 1.2rem; margin-bottom: 10px;">طقم الصيف المورد</h3>
+                    <p style="color: var(--accent); font-weight: 700;">420 ر.س</p>
+                </article>
+
+                <!-- Product 3 -->
+                <article class="product-item reveal">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&q=80" alt="Elegant Blouse">
+                        <button class="add-btn" onclick="addToCart(3, 'بلوزة الأناقة الفاخرة', 290, 'https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&q=80')">أضيفي للحقيبة</button>
+                    </div>
+                    <h3 style="font-size: 1.2rem; margin-bottom: 10px;">بلوزة الأناقة الفاخرة</h3>
+                    <p style="color: var(--accent); font-weight: 700;">290 ر.س</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer style="background: #111; color: #fff; padding: 100px 0;">
+        <div class="container" style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 80px;">
+            <div>
+                <h2 style="font-size: 3rem; margin-bottom: 30px;">xxxx</h2>
+                <p style="color: #666; max-width: 400px;">وجهتُكِ الأولى لعالم الأناقة والفخامة. نحن نؤمن بأن كل امرأة تستحق أن تظهر بأبهى حلة في كل يوم.</p>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 25px;">المساعدة</h4>
+                <ul style="color: #666; font-size: 0.9rem;">
+                    <li><a href="#">الشحن والتوصيل</a></li>
+                    <li><a href="#">المرتجعات</a></li>
+                    <li><a href="#">الأسئلة الشائعة</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 25px;">تواصل</h4>
+                <p style="color: #666; font-size: 0.9rem;">الرياض، المملكة العربية السعودية</p>
+                <p style="color: #666; font-size: 0.9rem;">+966 500 000 000</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Bar -->
+    <div class="float-bar">
+        <a href="https://wa.me/966500000000" class="float-btn"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="cart.html" class="float-btn" style="position: relative;">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span class="count" style="position: absolute; top: -5px; left: -5px; background: var(--accent); color: white; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: 700;">0</span>
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
